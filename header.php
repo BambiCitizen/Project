@@ -19,9 +19,27 @@ _________________________________________________________ -->
                     </div>
 
                     <div class="login">
-                        <!--TODO remove this if customer is logged in-->
-                        <a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">Sign in</span></a>
-                        <a href="customer-register.php"><i class="fa fa-user"></i> <span class="hidden-xs text-uppercase">Sign up</span></a>
+                        <?php
+                            $loggedIn = false; //TODO add loggedIn checker
+                            if($loggedIn) {
+                                ?>
+                                <!-- TODO add an href for login/logout-->
+                                <a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-sign-in"></i>
+                                    <span class="hidden-xs text-uppercase">Sign in</span></a>
+                                <a href="customer-register.php"><i class="fa fa-user"></i> <span
+                                            class="hidden-xs text-uppercase">Sign up</span></a>
+                                <?php
+                            } else {
+                                ?>
+                                <span class="hidden-sm hidden-xs welcomeMessage">Welcome, <?php echo "TEST"//TODO put firstName here?>!</span>
+                                <a href="#"><i class="fa fa-sign-out"></i>
+                                    <span class="hidden-xs text-uppercase">Logout</span></a>
+                                <a href="customer-register.php"><i class="fa fa-user"></i> <span
+                                            class="hidden-xs text-uppercase">Account</span></a>
+                                <?php
+                            }
+                        ?>
+
                     </div>
 
                 </div>
@@ -61,7 +79,13 @@ _________________________________________________________ -->
                         <li><a href="about.php">About</a></li>
                         <li><a href="contact.php">Contact</a></li>
                         <?php
-                        //TODO add (Cart/Account)
+                            //TODO add (cart-wishlist-account tap)
+                            if(false) {
+                                ?>
+                                <li><a href="shop-basket.php">Shopping Cart</a></li>
+                                <li><a href="customer-wishlist.php">Wishlist</a></li>
+                                <?php
+                            }
                         ?>
                         <!--                            <li><a href="shop-category-left.php">TESTING</a></li>-->
                     </ul>
