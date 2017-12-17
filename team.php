@@ -64,7 +64,7 @@
                     </div>
                     <div class="col-md-5">
                         <ul class="breadcrumb">
-                            <li><a href="shop-category-left.php">Home</a>
+                            <li><a href="index.php">Home</a>
                             </li>
                             <li>Our team</li>
                         </ul>

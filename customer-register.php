@@ -81,22 +81,26 @@
                             <p class="text-muted">If you have any questions, please feel free to <a href="contact.html">contact us</a>, our customer service center is working for you 24/7.</p>
 
                             <hr>
-
-                            <form action="customer-orders.html" method="post">
+                            <span id="error-register"></span>
+                            <form name="registerationForm" action="validate-registeration.php" onsubmit="return validateRegisteration()" method="post">
                                 <div class="form-group">
-                                    <label for="name-login">Name</label>
-                                    <input type="text" class="form-control" id="name-login">
+                                    <label for="name-login">Username</label>
+                                    <input type="text" class="form-control" name="username" id="name-register" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="email-login">Email</label>
-                                    <input type="text" class="form-control" id="email-login">
+                                    <input type="text" class="form-control" name="email" id="email-register" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="password-login">Password</label>
-                                    <input type="password" class="form-control" id="password-login">
+                                    <input type="password" class="form-control" name="password" id="password-register" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="passwordconfirm-login">Password Confirmation</label>
+                                    <input type="password" class="form-control" name="passwordconfirmation" id="passwordconfirm-register" required>
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-template-main"><i class="fa fa-user-md"></i> Register</button>
+                                    <button type="submit" class="btn btn-template-main"><i class="fa fa-user-md"></i>Register</button>
                                 </div>
                             </form>
                         </div>
@@ -111,15 +115,15 @@
                                 ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 
                             <hr>
-
-                            <form action="customer-orders.html" method="post">
+                            <span id="error-login"></span>
+                            <form name="loginForm" action="validate-login.php" onsubmit="return validateLogin()" method="post">
                                 <div class="form-group">
                                     <label for="email">Email</label>
-                                    <input type="text" class="form-control" id="email">
+                                    <input type="text" class="form-control" id="email-login">
                                 </div>
                                 <div class="form-group">
                                     <label for="password">Password</label>
-                                    <input type="password" class="form-control" id="password">
+                                    <input type="password" class="form-control" id="password-login">
                                 </div>
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-template-main"><i class="fa fa-sign-in"></i> Log in</button>
@@ -338,8 +342,7 @@ _________________________________________________________ -->
     <script src="js/jquery.counterup.min.js"></script>
     <script src="js/jquery.parallax-1.1.3.js"></script>
     <script src="js/front.js"></script>
-
-    
+    <script src="js/form-validation.js"></script>
 
 
 

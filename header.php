@@ -1,5 +1,5 @@
-<header>
 
+<header>
     <!-- *** TOP ***
 _________________________________________________________ -->
     <div id="top">
@@ -20,7 +20,7 @@ _________________________________________________________ -->
 
                     <div class="login">
                         <?php
-                            $loggedIn = false; //TODO add loggedIn checker
+                            $loggedIn = true; //TODO add loggedIn checker
                             if($loggedIn) {
                                 ?>
                                 <!-- TODO add an href for login/logout-->
@@ -30,11 +30,12 @@ _________________________________________________________ -->
                                             class="hidden-xs text-uppercase">Sign up</span></a>
                                 <?php
                             } else {
+                                $username = "User"; //TODO retrieve username from database
                                 ?>
-                                <span class="hidden-sm hidden-xs welcomeMessage">Welcome, <?php echo "TEST"//TODO put firstName here?>!</span>
+                                <span class="hidden-sm hidden-xs">Welcome, <?php echo "$username"//TODO put firstName here?>!</span>
                                 <a href="#"><i class="fa fa-sign-out"></i>
                                     <span class="hidden-xs text-uppercase">Logout</span></a>
-                                <a href="customer-register.php"><i class="fa fa-user"></i> <span
+                                <a href="customer-account.php"><i class="fa fa-user"></i> <span
                                             class="hidden-xs text-uppercase">Account</span></a>
                                 <?php
                             }
@@ -59,7 +60,7 @@ _________________________________________________________ -->
             <div class="container">
                 <div class="navbar-header">
 
-                    <a class="navbar-brand home" href="shop-category-left.php">
+                    <a class="navbar-brand home" href="index.php">
                         <img src="img/logo.png" alt="Universal logo" class="hidden-xs hidden-sm">
                         <img src="img/logo-small.png" alt="Universal logo" class="visible-xs visible-sm"><span class="sr-only">Universal - go to homepage</span>
                     </a>
@@ -75,7 +76,7 @@ _________________________________________________________ -->
                 <div class="navbar-collapse collapse" id="navigation">
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="shop-category-left.php">Home</a></li>
+                        <li class="active"><a href="index.php">Home</a></li>
                         <li><a href="about.php">About</a></li>
                         <li><a href="contact.php">Contact</a></li>
                         <?php
