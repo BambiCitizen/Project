@@ -177,6 +177,22 @@
                             <li>Regular fit</li>
                             <li>The model (height 5'8" and chest 33") is wearing a size S</li>
                         </ul>
+                        <?php
+                        session_start();
+                        if(isset($_SESSION['auth'])||isset($_COOKIE['auth'])) {
+                            ?>
+
+                        <h4>Contact Details</h4>
+                        <ul>
+                            <li>Mobile Number: 055999933</li>
+                            <li>Email: example_group59@ksu.sa</li>
+                            <li>Shipping: World-Wide shipping</li>
+                        </ul>
+                        <?php}?>
+                        <h4>Please sign in to view contact detail</h4>
+
+
+
 
                         <blockquote>
                             <p><em>Define style this season with Armani's new range of trendy tops, crafted with intricate details. Create a chic statement look by teaming this lace number with skinny jeans and pumps.</em>
